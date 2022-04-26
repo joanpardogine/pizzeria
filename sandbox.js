@@ -13,18 +13,38 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // S'inicialitza Cloud Firestore i s'oté una referència al servei
+// db.collection('recipes').get()
+//     .then(snapshot => {
+//         // console.log(snapshot.docs[0].data());
+//         snapshot.forEach(doc => {
+//             console.log(doc.data());
+//         });
+//     })
+//     .catch(err => console.log(err));
+
+// db.collection('recipes').get()
+// .then(snapshot => {
+//     // to do when data is recieved
+//     console.log(snapshot);
+// })
+// .catch(err => console.log(err));
+
+const list = document.querySelector('ul');
+const addRecipe = recipe => {
+    let html = `
+        <li>
+            <div>${recipe.title}</div>
+        </li>
+    `;
+    // console.log(html);
+    list.innerHTML += html;
+};
 db.collection('recipes').get()
     .then(snapshot => {
         // console.log(snapshot.docs[0].data());
         snapshot.forEach(doc => {
-            console.log(doc.data());
+            // console.log(doc.data());
+            addRecipe(doc.data());
         });
     })
     .catch(err => console.log(err));
-
-    // db.collection('recipes').get()
-    // .then(snapshot => {
-    //     // to do when data is recieved
-    //     console.log(snapshot);
-    // })
-    // .catch(err => console.log(err));
