@@ -1,3 +1,5 @@
+imanol/
+
 # Logs
 logs
 *.log
@@ -16,6 +18,7 @@ firebase-debug.*.log*
 # For a team working on the same Firebase project(s), it is recommended to leave
 it commented so all members can deploy to the same project(s) in .firebaserc.
 # .firebaserc
+
 
 # Runtime data
 pids
@@ -72,4 +75,5 @@ sandbox copy.js
 sandbox_imanol.js
 imanol/.gitignore
 imanol/FirebaseModificar/FirebaseModificar.zip
+.gitignore
 .gitignore

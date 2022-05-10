@@ -15,18 +15,23 @@
     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
 </head>
 <body>
-  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
     <div class="container my-5">
         <h3>Recipes</h3>
-        <ul>
-
-        </ul>
-        <form>
+        <ul id="llista"></ul>
+        <form id="formAfegir">
             <label for="recipe">Add a new recipe:</label>
             <div class="input-group col-lg-6">
                 <input type="text" class="form-control" id="recipe" required>
                 <div class="input-group-append">
                     <input type="submit" value="add" class="btn btn-outline-primary">
+                </div>
+            </div>
+        </form>
+        <form id="formModificar">
+            <div class="input-group col-lg-6">
+                <input type="text" class="form-control" id="txtModifica">
+                <div class="input-group-append">
+                    <input type="submit" value="modifica" class="btn btn-outline-warning">
                 </div>
             </div>
         </form>
